@@ -1,0 +1,272 @@
+:root{
+    --fuerte:#3674B5;
+    --medio:#578FCA;
+    --bajo: #A1E3F9;
+    --claro:#D1F8EF;
+    --fuentedsi:Anton;
+    --colorvivo:rgb(1, 90, 192);
+
+    --letra-gen:Roboto;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+/* ---------------------------header------------------- */
+header{
+    background-color: var(--fuerte);
+    max-width: 100%;
+    height: 4em;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.descripcion p{
+    font-family: Roboto;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    }
+.descripcion{
+    margin: 2em;
+}
+.principio{
+    font-family: Roboto;
+    color:var(--claro);
+}
+.redes{
+    margin: 0px 50px;
+    font-family: Roboto;
+    color:var(--claro);
+    font-weight: bold;
+}
+/* ------------------------------------------------------------------------- */
+/* ---------------------------------------navegador------------------ */
+/* --------------------------------------------------------------------------- */
+.navegador{
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0px 2px 2px var(--claro);
+}
+.navegador img{
+    width: 80px;
+    margin: 10px auto;
+}
+.navegador .logo{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    font-family: var(--fuentedsi);
+    font-size: 3em;
+    color:rgb(1, 90, 192);
+}
+/* -----------------------------------navegador menu------------------*/
+.navegador .men{
+    list-style: none    ;
+}
+.navegador .men li{
+    display: inline-block;
+    font-family: Roboto;
+    padding: 20px;
+    transition: .5s ease;
+}
+.navegador .men li a{
+    text-decoration: none;
+    font-weight: bold;
+}
+.menu li:hover{
+    background-color: rgb(225, 232, 253);
+    border-radius: 15px;
+}
+.menu li:hover a{
+    color: var(--colorvivo);
+    font-size: 1.1em;
+}
+/* -------------------------------------- */
+.btn{
+    display: flex;
+    background-color: var(--medio);
+    border-radius: 10px;
+    height: 2.5em;
+    width: 7em;
+    align-items: center;
+    justify-content: center;
+}
+.btn a{
+    text-decoration: none;
+        font-family: Roboto;
+        font-weight: bold;
+        color: white;
+}
+/* ---------------------------------------------------------------------------------------- */
+/* ---------------------------------------------------slyder--------------------------- */
+
+.slyder{
+    display: flex;
+}
+.slyder .fond{
+    width: 100%;
+}
+.slyder .fot {
+    width: 40%;
+    position: absolute;
+    z-index: 70;
+    right: 0;
+}
+/* ---------------------------------------------items--------------------------------- */
+.barra-total{
+    width: 80%;
+    position: relative;
+    display: flex;  
+    margin: auto;
+     
+}
+.barra-items{
+    position: absolute;
+    display: flex;
+    z-index: 100;
+    right: 0;
+    top: -70px;
+    gap: 20px;
+}
+.principal{
+    width: 17rem;
+    height: 9rem;
+    border-radius: 20px;
+    display: flex;
+    position: relative;
+    overflow: hidden;
+}
+
+.base{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    border-radius: 20px;
+    opacity: 1;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+}
+.base img{
+    width: 80px;
+    height: 80px;
+}
+.base h4{
+    font-family: var(--letra-gen);
+    color:var(--fuerte);
+    font-size: 1.3em;
+}
+
+.fluye{
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    height: 100%;
+    background-color: #578FCA;
+    border-radius: 20px;
+    transition: .5s ease;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+}
+.fluye img{
+    width: 80px;
+    height: 80px;
+}
+.fluye p{
+    font-family: var(--letra-gen);
+    color:white;
+    font-size: 1.3em;
+}
+
+.principal:hover .fluye{
+    top: 0;
+    background-color: var(--medio);
+}
+.principal:hover .base{
+    opacity: 0;
+}
+/* -----------------------------------------nosotros--------------- */
+.section1{
+    margin: 6em;
+}
+.section1 .titulo{
+    display: flex;
+    justify-content: center;
+    font-family: Roboto;
+    font-size: 2em;
+    color: var(--fuerte);
+    text-decoration: underline;
+}
+
+/* ---------------------------------------------------------------------- */
+/* -----------------------------media querys---------------------------------------------- */
+
+@media (max-width: 768px){
+   header{
+    background-color: var(--fuerte);
+    max-width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+} 
+/* -------------------------------------------------- */
+.navegador{
+    width: 100%;
+    margin: auto;
+    display: flex;
+    box-shadow: 0px 2px 2px var(--claro);
+    flex-direction: column;
+}
+.logo{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    font-family: var(--fuentedsi);
+    font-size: 3em;
+    color:rgb(1, 90, 192);
+}
+
+/* ----------------------------------------------------------- */
+.navegador .men li{
+    padding: 10px;  
+}
+.btn{
+    width: 95%;
+}
+/* ............................................................ */
+.slyder{
+    display: flex;
+    margin-top: 1em;
+}
+.slyder .fot {
+    width: 75%;
+    position: absolute;
+    z-index: 70;
+    right: 0;
+}
+
+/* ---------------------------------------------------------- */
+.barra-items{
+    position: absolute;
+    display: flex;
+    z-index: 100;
+    right: 0;
+    top: 10em;
+    gap: 20px;
+}
+
+.section1{
+    margin: 15em auto;
+}
+
+}

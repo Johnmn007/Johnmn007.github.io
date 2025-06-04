@@ -1,0 +1,51 @@
+:root{
+    --fuerte:#3674B5;
+    --medio:#578FCA;
+    --bajo: #A1E3F9;
+    --claro:#D1F8EF;
+    --fuentedsi:BOSTON CAPS;
+    --colorvivo:rgb(1, 90, 192);
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.principal{
+    width: 300px;
+    height: 150px;
+    border-radius: 20px;
+    box-shadow: 2px 2px 2px gray;
+    display: flex;
+    position: relative;
+    overflow: hidden;
+}
+
+.base{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #cab957;
+    border-radius: 20px;
+    opacity: 1;
+}
+
+.fluye{
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    height: 100%;
+    background-color: #578FCA;
+    border-radius: 20px;
+    transition: .5s ease;
+}
+
+.principal:hover .fluye{
+    top: 0;
+    background-color: #877409;
+}
+.principal:hover .base{
+    opacity: 0;
+}
